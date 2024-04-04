@@ -5,7 +5,7 @@ import { FaUserSecret } from "react-icons/fa6";
 
 const NavBar = () =>{
     return(
-        <div className="max-w-screen-lg mx-auto py-4 text-white flex gap-2 items-center justify-between border-b-[1px] border-zinc-700">
+        <div className="max-w-screen-lg mx-auto py-4 text-white flex gap-2 items-center justify-between border-b-[1px] border-zinc-700 font-serif">
             <div className="nleft flex gap-8 text-xs ml-12 items-center justify-between">
                 <FaUserSecret style={{
                             color: "#ffffff",
