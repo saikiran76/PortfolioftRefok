@@ -1,0 +1,13 @@
+
+const Stripe = ({val}) =>{
+    return(
+        <div className="w-[16.66%] border-t-[1px] border-r-[1px] border-b-[1px] border-zinc-700 px-4 py-3 flex justify-between items-center">
+            <span className="text-white font-semibold text-sm">{val}</span>
+            <span>1</span>
+
+        </div>
+
+    )
+}
+
+export default Stripe;
