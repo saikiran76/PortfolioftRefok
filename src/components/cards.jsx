@@ -9,10 +9,10 @@ const Cards = () =>{
         description:"Youtube built from scratch from its native styling to its functionality. Includes Sections like Header, sidebar, Category list, Home, Video page, comment sectio. The data is not hard-coded, the data from Youtube API has been used for nativity. It is built using my favourite frontend javascript framework React and Redux is also used for advanced state (data) management."
     }, {
         name: "FoodOnline",
-        Description: "Order your food online and your needs on your way at your doorstep. A Frontend application like Swiggy built with love using React."
+        description: "Order your food online and your needs on your way at your doorstep. A Frontend application like Swiggy built with love using React."
     }, {
         name: "Alike Airbnb",
-        Description: "an exceptional end-to-end application that mirrors the renowned features of Airbnb. From exploring listings to adding new ones as authorized users, our application boasts a stunning user interface coupled with robust authentication functionalities. Leveraging the Mapbox API for seamless geocoding, our project is a testament to innovation and user-centric design."
+        description: "an exceptional end-to-end application that mirrors the renowned features of Airbnb. From exploring listings to adding new ones as authorized users, our application boasts a stunning user interface coupled with robust authentication functionalities. Leveraging the Mapbox API for seamless geocoding, our project is a testament to innovation and user-centric design."
     },
     {
         name: "Portfolio Website",
@@ -20,7 +20,7 @@ const Cards = () =>{
        }
 ]
     return(
-        <div className="border-zinc-700 min-w-xl font-serif py-20 mt-10">
+        <div className="border-zinc-700 min-w-xl font-serif py-20 text-white">
             {
                 cards.map((item, index)=>(
                     <Card key={index} name={item.name} desc={item.description}/>
