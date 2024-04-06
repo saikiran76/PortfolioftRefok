@@ -20,7 +20,7 @@ const Cards = () =>{
        }
 ]
     return(
-        <div className="border-zinc-700 border-t-[0.5px] border-b-[1px] min-w-xl mt-2 font-serif">
+        <div className="border-zinc-700 min-w-xl font-serif py-20 mt-10">
             {
                 cards.map((item, index)=>(
                     <Card key={index} name={item.name} desc={item.description}/>

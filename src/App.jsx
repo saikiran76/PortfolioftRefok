@@ -1,6 +1,7 @@
 import NavBar from "./components/NavBar";
 import Work from "./components/Work";
 import Cards from "./components/cards";
+import Marks from "./components/marks";
 import Stripes from "./components/stripes";
 
 
@@ -11,6 +12,7 @@ const App = () =>{
       <Work/>
       <Stripes/>
       <Cards/>
+      <Marks/>
 
     </div>
   )
