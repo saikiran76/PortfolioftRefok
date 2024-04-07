@@ -43,12 +43,14 @@ const Cards = () =>{
         <div className="absolute w-full h-full pointer-events-none top-0">
             <motion.div initial={{y:pos, x:"-50%"}}
              animate={{y:pos+`rem`}}
-             className="window absolute -translate-x-[50%] -translate-y-[50%] h-[12rem] w-[13rem] left-[44%] bg-sky-100 top-0 rounded-lg overflow-hidden">
+             transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}}
+             className="window absolute -translate-x-[50%] -translate-y-[50%] h-[12rem] w-[13rem] left-[44%] bg-green-500 top-0 rounded-lg overflow-hidden">
                 {/* <div className= "w-full h-full bg-red-100 rounded-lg"></div> */}
                 {/* <video width="900" height="450" autoPlay muted loop>
                     <source src={myVideo} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video> */}
+                <p className="text-white px-3 pt-3">Current Trending Project</p>
                 <ReactPlayer
                     className="player"
                     url={myVideo}
@@ -57,10 +59,10 @@ const Cards = () =>{
                     playing={true}
                     muted={true}
                 />
-                <div className=" w-full h-full -translate-x-[50%]  bg-red-200 rounded-lg left-[44%]"></div>
-                <div className=" w-full h-full -translate-x-[50%]  bg-red-300 rounded-lg left-[44%]"></div>
-                <div className="w-full h-full -translate-x-[50%]  bg-red-400 rounded-lg left-[44%]"></div>
-                <div className=" w-full h-full -translate-x-[50%]  bg-green-400 rounded-lg left-[44%]"></div>
+                <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className=" w-full h-full -translate-x-[50%]  bg-red-200 rounded-lg left-[44%]"></motion.div>
+                <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className=" w-full h-full -translate-x-[50%]  bg-red-300 rounded-lg left-[44%]"></motion.div>
+                <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className="w-full h-full -translate-x-[50%]  bg-red-400 rounded-lg left-[44%]"></motion.div>
+                <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className=" w-full h-full -translate-x-[50%]  bg-green-400 rounded-lg left-[44%]"></motion.div>
 
             </motion.div>
         </div>

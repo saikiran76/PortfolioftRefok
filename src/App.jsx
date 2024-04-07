@@ -16,25 +16,25 @@ const App = () => {
   const scroll = new LocomotiveScroll();
   return(
     <div className="h-screen w-full bg-zinc-900 font-medium">
-       <div className="bg-zinc-900">
+       <div className="bg-zinc-900 md:w-full">
         <NavBar />
       </div>
-      <div className="bg-zinc-900">
+      <div className="bg-zinc-900 md:w-full">
         <Work />
       </div>
-      <div className="bg-zinc-900">
+      <div className="bg-zinc-900 md:w-full">
         <Stripes />
       </div>
-      <div className="bg-zinc-900">
+      <div className="bg-zinc-900 md:w-full">
         <Cards />
       </div>
-      <div className="bg-zinc-900">
+      <div className="bg-zinc-900 md:w-full">
         <Marks />
       </div>
-      <div className="bg-zinc-900">
+      <div className="bg-zinc-900 md:w-full">
         <NewCard />
       </div>
-      <div className="bg-zinc-900">
+      <div className="bg-zinc-900 md:w-full">
         <Footer/>
       </div>
 

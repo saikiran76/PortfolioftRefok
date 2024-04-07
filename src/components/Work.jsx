@@ -46,19 +46,31 @@ const Work = () =>{
     })
 
     return(
-        <div className="max-w-screen-lg mx-auto h-96 relative font-serif">
-                <h1 style={hoverStyles} onMouseEnter={(e) => e.target.style = hoverStyles} onMouseLeave={(e) => e.target.style = null} className="text-medium tracking-tighter text-[50vh] text-center text-white">Work</h1>
-
-                <div className="w-full h-full absolute top-0">
-                    {
-                    images.map((item, index) => (
-                            item.isActive && <img
-                                key={index}
-                                src={item.url}
-                                className="absolute w-64 rounded-lg -translate-x-50% -translate-y-50%" style={{top: item.top, left:item.left}} alt="Net" />))
-                    }
-                </div>
-        </div>
+      <div className="max-w-screen-lg mx-auto relative font-serif">
+      <h1
+        style={hoverStyles}
+        onMouseEnter={(e) => (e.target.style = hoverStyles)}
+        onMouseLeave={(e) => (e.target.style = null)}
+        className="text-medium tracking-tighter text-[10vh] sm:text-[50vh] text-center text-white"
+      >
+        Work
+      </h1>
+    
+      <div className="w-full h-[50vh] sm:h-96 absolute top-0">
+        {images.map((item, index) => (
+          item.isActive && (
+            <img
+              key={index}
+              src={item.url}
+              className="absolute w-32 sm:w-64 rounded-lg -translate-x-50% -translate-y-50%"
+              style={{ top: item.top, left: item.left }}
+              alt="Net"
+            />
+          )
+        ))}
+      </div>
+    </div>
+    
     )
 }
 
