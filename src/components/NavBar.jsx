@@ -50,14 +50,14 @@ const NavBar = () => {
       </div>
 
       <div className="md:hidden">
-        <button onClick={toggleMenu}>
+        <button onClick={() => toggleMenu()}>
           {isMenuOpen ? (
             <FaTimes style={{ color: '#ffffff', fontSize: '24px' }} />
           ) : (
             <FaBars style={{ color: '#ffffff', fontSize: '24px' }} />
           )}
         </button>
-        {!isMenuOpen && (
+        {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-sky-800 py-4 px-8 hidden">
             {['Home', 'Projects', 'skills', '', 'Contact'].map((item, index) => (
               <a

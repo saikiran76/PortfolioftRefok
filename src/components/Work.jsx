@@ -46,7 +46,7 @@ const Work = () =>{
     })
 
     return(
-      <div className="max-w-screen-lg mx-auto relative font-serif">
+      <div className="max-w-screen-lg mx-auto relative font-serif h-full">
       <h1
         style={hoverStyles}
         onMouseEnter={(e) => (e.target.style = hoverStyles)}
