@@ -21,7 +21,7 @@ const Marks = () =>{
     ]
 
     return(
-        <div>
+        <div className="overflow-scroll scrollbar-custom">
             {
                 images.map((item, index)=>(
                     <Mark key={index} imgArr={item} />

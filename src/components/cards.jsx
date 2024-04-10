@@ -50,7 +50,7 @@ const Cards = () =>{
                     <source src={myVideo} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video> */}
-                <p className="text-white px-3 pt-3">Current Trending Project</p>
+                <a className="cursor-pointer z-0" href="https://netgpt-b774f.web.app"><p className="text-white px-3 pt-3 cursor-pointer z-10">Current Trending Project</p></a>
                 <ReactPlayer
                     className="player"
                     url={myVideo}

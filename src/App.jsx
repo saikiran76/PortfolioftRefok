@@ -15,7 +15,7 @@ import "./fonts/Satoshi-Medium.otf"
 const App = () => {
   const scroll = new LocomotiveScroll();
   return(
-    <div className="h-screen w-full bg-zinc-900 font-medium">
+    <div className="h-screen w-full bg-zinc-900 font-medium scrollbar-custom overflow-hidden">
        <div className="bg-zinc-900 md:w-full">
         <NavBar />
       </div>

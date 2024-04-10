@@ -82,7 +82,7 @@ const NavBar = () => {
         )}
       </div>
 
-      <Button />
+      <Button name="Work" link="https://github.com/saikiran76" />
       {/* <Card ref={targetRef}/> */}
     </div>
   );
