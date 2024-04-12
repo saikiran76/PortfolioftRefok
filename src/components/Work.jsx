@@ -55,7 +55,7 @@ const Work = () =>{
         Work
       </h1>
     
-      <div className="w-full h-[55vh] sm:h-96 absolute top-0">
+      <div className="w-full h-[90vh] sm:h-96 absolute top-0">
         {images.map((item, index) => (
           item.isActive && (
             <img
