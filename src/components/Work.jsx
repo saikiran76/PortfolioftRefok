@@ -16,7 +16,6 @@ const Work = () =>{
       {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGrXa6QB6ih3I_6F3lPaJpJHSY-C1nZL0Nf9MJgFUeA&s", top:"50%", left:"50%", isActive:false },
       {url:"https://www.financialexpress.com/wp-content/uploads/2023/07/yt-reuters-4.jpg", top:"57%", left:"57%", isActive:false},
       {url:"https://startuptrak.com/wp-content/uploads/2020/12/Swiggy-Food-Startup.jpg", top:"63%", left:"60%", isActive:false},
-      // {url:"https://www.financialexpress.com/wp-content/uploads/2023/07/yt-reuters-4.jpg", top:"69%", left:"65%", isActive:"false"}
     ]);
 
     scrollYProgress.on("change", (data)=>{
@@ -32,13 +31,13 @@ const Work = () =>{
         case 0:
            imagesShow([])
            break;
-        case 5:
+        case 2:
            imagesShow([0])
            break;
-        case 7:
+        case 3:
           imagesShow([0, 1])
           break;
-        case 9:
+        case 4:
           imagesShow([0, 1, 2])
           break;
           
@@ -51,7 +50,7 @@ const Work = () =>{
         style={hoverStyles}
         onMouseEnter={(e) => (e.target.style = hoverStyles)}
         onMouseLeave={(e) => (e.target.style = null)}
-        className="text-medium tracking-tighter text-[14vh] md:text-[36vh] text-center text-white"
+        className="text-medium tracking-tighter text-[24vh] md:text-[36vh] text-center text-white px-4"
       >
         Work
       </h1>
@@ -62,7 +61,7 @@ const Work = () =>{
             <img
               key={index}
               src={item.url}
-              className="absolute w-36 sm:w-64 rounded-lg -translate-x-50% -translate-y-50%"
+              className="absolute w-32 sm:w-64 rounded-lg -translate-x-50% -translate-y-50%"
               style={{ top: item.top, left: item.left }}
               alt="Net"
             />
