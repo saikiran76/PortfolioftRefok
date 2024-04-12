@@ -32,13 +32,13 @@ const Work = () =>{
         case 0:
            imagesShow([])
            break;
-        case 3:
+        case 5:
            imagesShow([0])
            break;
-        case 5:
+        case 7:
           imagesShow([0, 1])
           break;
-        case 7:
+        case 9:
           imagesShow([0, 1, 2])
           break;
           
@@ -46,12 +46,12 @@ const Work = () =>{
     })
 
     return(
-      <div className="max-w-screen-lg mx-auto relative font-serif h-full">
+      <div className="max-w-screen-lg mx-auto relative font-serif h-full md:h-full">
       <h1
         style={hoverStyles}
         onMouseEnter={(e) => (e.target.style = hoverStyles)}
         onMouseLeave={(e) => (e.target.style = null)}
-        className="text-medium tracking-tighter text-[10vh] sm:text-[50vh] text-center text-white"
+        className="text-medium tracking-tighter text-[14vh] md:text-[36vh] text-center text-white"
       >
         Work
       </h1>
@@ -62,7 +62,7 @@ const Work = () =>{
             <img
               key={index}
               src={item.url}
-              className="absolute w-32 sm:w-64 rounded-lg -translate-x-50% -translate-y-50%"
+              className="absolute w-36 sm:w-64 rounded-lg -translate-x-50% -translate-y-50%"
               style={{ top: item.top, left: item.left }}
               alt="Net"
             />

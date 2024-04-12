@@ -5,9 +5,9 @@ import myVideo from "../assets/N.mp4"
 import ReactPlayer from "react-player";
 
 const Cards = () =>{
-    const [pos, setPos] = useState(0);
+    const [pos, setPos] = useState(6);
     const mover = (val) =>{
-        setPos(val*12);
+        setPos(val*13);
     }
 
 
@@ -50,7 +50,7 @@ const Cards = () =>{
                     <source src={myVideo} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video> */}
-                <a className="cursor-pointer z-0" href="https://netgpt-b774f.web.app"><p className="text-white px-3 pt-3 cursor-pointer z-10">Current Trending Project</p></a>
+                <a className="cursor-pointer" href="https://netgpt-b774f.web.app"><p className="text-white px-3 pt-3 cursor-pointer">Current Trending Project</p></a>
                 <ReactPlayer
                     className="player"
                     url={myVideo}
@@ -59,7 +59,7 @@ const Cards = () =>{
                     playing={true}
                     muted={true}
                 />
-                <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className=" w-full h-full -translate-x-[50%]  bg-red-200 rounded-lg left-[44%]"></motion.div>
+                <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:pos+`rem`}} className=" w-full h-full -translate-x-[50%]  bg-red-200 rounded-lg left-[44%]"></motion.div>
                 <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className=" w-full h-full -translate-x-[50%]  bg-red-300 rounded-lg left-[44%]"></motion.div>
                 <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className="w-full h-full -translate-x-[50%]  bg-red-400 rounded-lg left-[44%]"></motion.div>
                 <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className=" w-full h-full -translate-x-[50%]  bg-green-400 rounded-lg left-[44%]"></motion.div>

@@ -6,7 +6,7 @@ const Footer = () =>{
             </div>
             <div className="pr-32 py-6 flex flex-col gap-4">
                 {
-                    ['📞  Contact: +91 7587093179', '✉️  Email: ksknew76105@gmail.com', '🔗  Linkedin', '🧑‍💻 Github'].map((item, index)=>(
+                    ['📞 +91 7587093179', '✉️ ksknew76105@gmail.com', '🔗  Linkedin', '🧑‍💻 Github'].map((item, index)=>(
                         item == "🔗  Linkedin" ? (<a href="https://www.linkedin.com/in/korada-saikiran-910a621a8/" key={index} className="text-sm tect-zinc-500 block cursor-pointer">{item}</a>):
                         <a key={index} className="text-sm tect-zinc-500 block cursor-pointer">{item}</a>
                     ))

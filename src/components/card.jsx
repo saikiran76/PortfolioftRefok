@@ -13,7 +13,7 @@ const Card = ({name, desc, mover, count}) =>{
                     {desc}
 
                 </p>
-                <Button name="More" link="https://github.com/saikiran76" />
+                <Button name="More" link="https://github.com/saikiran76/Netflix-GPT" />
             </div>
             
             
