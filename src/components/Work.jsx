@@ -45,12 +45,12 @@ const Work = () =>{
     })
 
     return(
-      <div className="max-w-screen-lg mx-auto relative font-serif h-full md:h-full">
+      <div className="max-w-screen-xl md:max-w-screen-lg mx-auto relative font-serif h-full md:h-full overflow-hidden">
       <h1
         style={hoverStyles}
         onMouseEnter={(e) => (e.target.style = hoverStyles)}
         onMouseLeave={(e) => (e.target.style = null)}
-        className="text-medium tracking-tighter text-[24vh] md:text-[36vh] text-center text-white px-4"
+        className="text-medium tracking-tighter text-[22vh] md:text-[36vh] text-center text-white px-4"
       >
         Work
       </h1>
