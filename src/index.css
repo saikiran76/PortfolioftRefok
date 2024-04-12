@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.overflow-scroll {
+/* .overflow-scroll {
     overflow-x: scroll;
     overflow-y: hidden;
     
@@ -29,4 +29,4 @@
   .scrollbar-custom::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
-  
+   */

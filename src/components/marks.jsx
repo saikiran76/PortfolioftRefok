@@ -23,7 +23,7 @@ const Marks = () =>{
     ]
 
     return(
-        <div className="overflow-x-scroll md:overflow-hidden scrollbar-custom">
+        <div className="overflow-x-scroll md:overflow-clip scrollbar-custom">
             {
                 images.map((item, index)=>(
                     <Mark key={index} imgArr={item} />

@@ -13,9 +13,9 @@ const Work = () =>{
       };
 
     const [images, setImages] = useState([
-      {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGrXa6QB6ih3I_6F3lPaJpJHSY-C1nZL0Nf9MJgFUeA&s", top:"50%", left:"50%", isActive:false },
-      {url:"https://www.financialexpress.com/wp-content/uploads/2023/07/yt-reuters-4.jpg", top:"57%", left:"57%", isActive:false},
-      {url:"https://startuptrak.com/wp-content/uploads/2020/12/Swiggy-Food-Startup.jpg", top:"63%", left:"60%", isActive:false},
+      {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGrXa6QB6ih3I_6F3lPaJpJHSY-C1nZL0Nf9MJgFUeA&s", top:"42%", left:"50%", isActive:false },
+      {url:"https://www.financialexpress.com/wp-content/uploads/2023/07/yt-reuters-4.jpg", top:"52%", left:"57%", isActive:false},
+      {url:"https://startuptrak.com/wp-content/uploads/2020/12/Swiggy-Food-Startup.jpg", top:"59%", left:"60%", isActive:false},
     ]);
 
     scrollYProgress.on("change", (data)=>{
@@ -45,23 +45,23 @@ const Work = () =>{
     })
 
     return(
-      <div className="max-w-screen-xl md:max-w-screen-lg mx-auto relative font-serif h-full md:h-full overflow-hidden">
+      <div className="max-w-screen-xl md:max-w-screen-lg mx-auto relative font-serif h-[480px] md:h-full overflow-hidden">
       <h1
         style={hoverStyles}
         onMouseEnter={(e) => (e.target.style = hoverStyles)}
         onMouseLeave={(e) => (e.target.style = null)}
-        className="text-medium tracking-tighter text-[22vh] md:text-[36vh] text-center text-white px-4"
+        className="text-medium tracking-tighter text-[20vh] md:text-[40vh] text-center text-white px-4"
       >
         Work
       </h1>
     
-      <div className="w-full h-[50vh] sm:h-96 absolute top-0">
+      <div className="w-full h-[55vh] sm:h-96 absolute top-0">
         {images.map((item, index) => (
           item.isActive && (
             <img
               key={index}
               src={item.url}
-              className="absolute w-32 sm:w-64 rounded-lg -translate-x-50% -translate-y-50%"
+              className="absolute w-32 sm:w-64 rounded-lg -translate-x-50% -translate-y-40%"
               style={{ top: item.top, left: item.left }}
               alt="Net"
             />
