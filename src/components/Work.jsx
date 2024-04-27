@@ -1,7 +1,6 @@
-import { data } from "autoprefixer";
-import { motion, useScroll } from "framer-motion"
+import { useScroll } from "framer-motion"
 import { useState } from "react";
-import ReactPlayer from "react-player";
+
 
 const Work = () =>{
   const {scrollYProgress } = useScroll();
@@ -17,7 +16,7 @@ const Work = () =>{
       {url:"https://www.financialexpress.com/wp-content/uploads/2023/07/yt-reuters-4.jpg", top:"52%", left:"57%", isActive:false},
       {url:"https://startuptrak.com/wp-content/uploads/2020/12/Swiggy-Food-Startup.jpg", top:"59%", left:"60%", isActive:false},
     ]);
-
+      
     scrollYProgress.on("change", (data)=>{
       function imagesShow(arr){
         setImages((prev)=>
