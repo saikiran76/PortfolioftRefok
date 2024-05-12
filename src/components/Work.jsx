@@ -1,5 +1,6 @@
 import { useScroll } from "framer-motion"
 import { useState } from "react";
+import image from "../assets/chat.png"
 
 
 const Work = () =>{
@@ -16,7 +17,10 @@ const Work = () =>{
       {url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGrXa6QB6ih3I_6F3lPaJpJHSY-C1nZL0Nf9MJgFUeA&s", top:"42%", left:"50%", isActive:false },
       {url:"https://www.financialexpress.com/wp-content/uploads/2023/07/yt-reuters-4.jpg", top:"52%", left:"57%", isActive:false},
       {url:"https://startuptrak.com/wp-content/uploads/2020/12/Swiggy-Food-Startup.jpg", top:"59%", left:"60%", isActive:false},
+      {url:`${image}`, top:"69%", left:"63%", isActive:false}
     ]);
+
+    console.log(image)
       
     scrollYProgress.on("change", (data)=>{
       function imagesShow(arr){
@@ -67,6 +71,7 @@ const Work = () =>{
             />
           )
         ))}
+        {(<img src={image} className="absolute w-32 sm:w-64 rounded-lg -translate-x-50% -translate-y-40%" style={{ top: "69%", left: "63%" }}/>)}
       </div>
     </div>
     
