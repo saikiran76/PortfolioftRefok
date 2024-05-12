@@ -4,10 +4,11 @@ import { useState } from "react";
 
 const Work = () =>{
   const {scrollYProgress } = useScroll();
+  //#22C55E
 
     const hoverStyles = {
         backgroundColor: '#dbf26e',
-        backgroundImage: 'linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%)',
+        backgroundImage: 'linear-gradient(329deg, #22C55E 37%, #61fa74 57%, #1cfdd6 100%)',
         transition: 'background-color 1s ease', 
       };
 
@@ -51,7 +52,7 @@ const Work = () =>{
         onMouseLeave={(e) => (e.target.style = null)}
         className="text-medium tracking-tighter text-[20vh] md:text-[40vh] text-center text-white px-4"
       >
-        Work
+        Hey!!!
       </h1>
     
       <div className="w-full h-[90vh] sm:h-96 absolute top-0">

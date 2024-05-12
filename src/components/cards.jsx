@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "./card";
 import { motion } from "framer-motion";
+import img from "../assets/chat.png"
 import myVideo from "../assets/N.mp4"
 import ReactPlayer from "react-player";
 
@@ -19,7 +20,13 @@ const Cards = () =>{
         name:"MyTube",
         description:"Youtube built from scratch from its native styling to its functionality. Includes Sections like Header, sidebar, Category list, Home, Video page, comment sectio. The data is not hard-coded, the data from Youtube API has been used for nativity. It is built using my favourite frontend javascript framework React and Redux is also used for advanced state (data) management.",
         link:"https://my-tube-amber.vercel.app/"
-    }, {
+    },
+    {
+        name:"SecretsAI",
+        description:"Meet Jessica, the AI assistant built using my fav framework React with which you can discuss your thoughts, interests and desires (secrets). Yeah yes, your secrets will not be leaked. With the secure login system you can trust with your secrets and seamlessly chat with Jessica. Comes with advanced data management with Redux toolkit, model integration using openrouter api, seamless & secure auth with Firebase. She's a anime addict by the way.."
+
+    },
+     {
         name: "FoodOnline",
         description: "Order your food online and your needs on your way at your doorstep. A Frontend application like Swiggy built with love using React.",
         link: "https://github.com/saikiran76/FoodOnline"
@@ -50,16 +57,18 @@ const Cards = () =>{
              animate={{y:pos+`rem`}}
              transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}}
              className="window absolute -translate-x-[50%] -translate-y-[50%] h-[12rem] w-[13rem] left-[44%] bg-green-500 top-0 rounded-lg overflow-hidden">
-dc
+
                 <a className="cursor-pointer" href="https://netgpt-b774f.web.app"><p className="text-white px-3 pt-3 cursor-pointer">Current Trending Project</p></a>
-                <ReactPlayer
+                {/* <ReactPlayer
                     className="player"
                     url={myVideo}
                     width="100%"
                     height="120%"
                     playing={true}
                     muted={true}
-                />
+                /> */}
+                <img src={img} alt="chat"/>
+                <h2 className="m-2 font-bold">Secrets AI</h2>
                 <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:pos+`rem`}} className=" w-full h-full -translate-x-[50%]  bg-red-200 rounded-lg left-[44%]"></motion.div>
                 <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className=" w-full h-full -translate-x-[50%]  bg-red-300 rounded-lg left-[44%]"></motion.div>
                 <motion.div transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}} animate={{y:-pos+`rem`}} className="w-full h-full -translate-x-[50%]  bg-red-400 rounded-lg left-[44%]"></motion.div>
