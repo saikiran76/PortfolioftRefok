@@ -1,6 +1,6 @@
 const Footer = () =>{
     return(
-        <div className="max-w-screen-lg mx-auto flex flex-wrap justify-between items-center text-white font-serif pt-44 pb-24">
+        <div id="contact" className="max-w-screen-lg mx-auto flex flex-wrap justify-between items-center text-white font-serif pt-44 pb-24">
             <div className="px-10 py-6 text-white">
                 <h1 className="text-7xl font-bold">Hire me</h1>
             </div>

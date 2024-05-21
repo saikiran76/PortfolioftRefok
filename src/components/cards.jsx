@@ -52,7 +52,7 @@ const Cards = () =>{
 
 
 
-        <div className="absolute w-full h-full pointer-events-none top-0">
+        <div id="projects" className="absolute w-full h-full pointer-events-none top-0">
             <motion.div initial={{y:pos, x:"-50%"}}
              animate={{y:pos+`rem`}}
              transition={{ease:[0.76, 0, 0.24, 1], duration:0.6}}
