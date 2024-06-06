@@ -1,10 +1,11 @@
 import { useScroll } from "framer-motion"
 import { useState } from "react";
 import image from "../assets/chat.png"
+import Toolbar from "./Bar";
 
 
 const Work = () =>{
-  const {scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll();
   //#22C55E
 
     const hoverStyles = {
@@ -72,6 +73,7 @@ const Work = () =>{
           )
         ))}
         {(<img src={image} className="absolute w-32 sm:w-64 rounded-lg -translate-x-50% -translate-y-40%" style={{ top: "69%", left: "63%" }}/>)}
+        <Toolbar/>
       </div>
     </div>
     
