@@ -76,7 +76,7 @@ const Toolbar = () => {
 
   return (
     <div className="flex justify-center">
-      <ul className="inline-flex justify-center m-0 p-2 bg-gray-800 bg-opacity-25 list-none relative h-10" ref={dockRef}>
+      <ul className="inline-flex justify-center m-0 p-2 bg-opacity-25 list-none relative h-10" ref={dockRef}>
         {images.map((image, index) => (
           <li
             className="w-10 mx-1"

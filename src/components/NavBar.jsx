@@ -1,26 +1,26 @@
-// import React from "react";
+import { useEffect, useRef, useState } from "react";
+import {gsap} from "gsap";
 import Button from "./Button";
-import {useRef} from "react";
-import { FaUserSecret } from "react-icons/fa6";
+import { FaUserSecret, FaBars} from "react-icons/fa6";
+import { FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
-// import Card from "./card";
-
-import { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const targetRef = useRef(null);
+  const menuRef = useRef(null);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-  
-  const scrollToTarget = () => {
-    if (targetRef.current) {
-      targetRef.current.scrollIntoView({ behavior: 'smooth' });
+  useEffect(() => {
+    if (menuRef.current) {
+      gsap.from(menuRef.current.children, {
+        y: -55,
+        opacity: 0,
+        delay: 0.3,
+        duration: 1,
+        stagger: 0.3
+      });
     }
-  };
+  }, []);
 
   const menuItems = [
     { name: "Home", target: "home" },
@@ -31,27 +31,26 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="max-w-screen-lg mx-auto md:max-w-screen-lg py-4 text-white flex flex-wrap gap-2 items-center justify-between border-b-[1px] border-zinc-700 font-serif overflow-hidden md:overflow-auto">
-      <div className="nleft flex flex-wrap gap-8 text-xs ml-12 items-center justify-between">
-        <FaUserSecret style={{ color: '#ffffff', fontSize: '30px' }} />
-        <div className={`md:flex md:flex-wrap md:gap-8 ${isMenuOpen ? 'flex' : 'hidden'}`}>
+    <div className="max-w-screen-lg mx-auto py-4 text-white flex flex-wrap gap-2 items-center justify-between border-b-[1px] border-zinc-700 font-serif">
+      <div className="flex items-center gap-8 text-sm ml-12">
+        <FaUserSecret style={{ color: "#ffffff", fontSize: "30px" }} />
+        <div ref={menuRef} className="hidden md:flex gap-8">
           {menuItems.map((item, index) => (
             <Link
-              key={item}
-              onClick={scrollToTarget}
-              to={`${item.target}`}
+              key={index}
+              to={item.target}
               smooth={true}
               duration={500}
-              className="flex flex-wrap p-2 cursor-pointer hover:text-green-400"
-            >  
+              className="p-2 cursor-pointer hover:text-green-400"
+            >
               {index === 1 && (
                 <span
-                  style={{ boxShadow: '0 0 0.75 #00FF19' }}
+                  style={{ boxShadow: "0 0 0.75px #00FF19" }}
                   className="inline-block bg-green-400 w-1 h-1"
                 ></span>
               )}
               {item.name}
-              {item.length === 0 && (
+              {item.name === "" && (
                 <span className="w-[1px] h-9 bg-zinc-700"></span>
               )}
             </Link>
@@ -62,45 +61,41 @@ const NavBar = () => {
       <div className="md:hidden">
         <button onClick={() => toggleMenu()}>
           {isMenuOpen ? (
-            <FaTimes style={{ color: '#ffffff', fontSize: '24px' }} />
-            
-            
+            <FaTimes style={{ color: "#ffffff", fontSize: "24px" }} />
           ) : (
-            
-            <FaBars style={{ color: '#ffffff', fontSize: '24px' }} />
+            <FaBars style={{ color: "#ffffff", fontSize: "24px" }} />
           )}
         </button>
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-sky-800 py-4 px-8 hidden">
-            {['Home', 'Projects', 'skills', '', 'Contact'].map((item, index) => (
-              <a
-                key={item}
-                onClick={scrollToTarget}
-                href="#"
-                className="flex flex-wrap p-2"
+          <div className="absolute top-full left-0 right-0 bg-sky-800 py-4 px-8">
+            {menuItems.map((item, index) => (
+              <Link
+                key={index}
+                to={item.target}
+                smooth={true}
+                duration={500}
+                className="p-2 cursor-pointer hover:text-green-400"
               >
                 {index === 1 && (
                   <span
-                    style={{ boxShadow: '0 0 0.75 #00FF19' }}
+                    style={{ boxShadow: "0 0 0.75px #00FF19" }}
                     className="inline-block bg-green-400 w-1 h-1"
                   ></span>
                 )}
-                {item}
-                {item.length === 0 && (
-                  <span className="w-[1px] h-9 bg-zinc-800"></span>
+                {item.name}
+                {item.name === "" && (
+                  <span className="w-[1px] h-9 bg-zinc-700"></span>
                 )}
-              </a>
+              </Link>
             ))}
           </div>
         )}
       </div>
-      <div className="mr-8 green-gradient_text">
+      <div className="mr-8">
         <Button name="Github" link="https://github.com/saikiran76" />
       </div>
-      {/* <Card ref={targetRef}/> */}
     </div>
   );
 };
 
 export default NavBar;
-
