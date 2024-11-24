@@ -35,10 +35,11 @@ const LoadingPage = () => {
         <div className="text-white text-center mt-8 max-w-md px-4 animate-fade-in">
           <p className="mb-4">
             The new version of the website is at{' '}
-            <a href="xyz.com" className="text-green-400 hover:text-green-300 underline">
+            <a href="https://upgraded-portfolio-jet.vercel.app/" className="text-green-400 hover:text-green-300 underline">
               xyz.com
             </a>
-            , please visit this for upgraded version for best experience.
+            , please visit this for upgraded version for best experience. 
+            <span className="text-lime-400 font-semibold block">Work in progress 🏗️</span>
           </p>
           <p>
             or{' '}
