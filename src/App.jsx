@@ -1,47 +1,18 @@
-import NavBar from "./components/NavBar";
-import Work from "./components/Work";
-import Cards from "./components/cards";
-import Footer from "./components/footer";
-import Marks from "./components/marks";
-import NewCard from "./components/newCard";
-import Stripes from "./components/stripes";
-import LocomotiveScroll from 'locomotive-scroll';
-import "./fonts/Satoshi-Black.otf"
-import "./fonts/Satoshi-BlackItalic.otf"
-import "./fonts/Satoshi-Bold.otf"
-import "./fonts/Satoshi-Medium.otf"
-
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import LoadingPage from './components/LoadingPage';
 
 const App = () => {
-  const scroll = new LocomotiveScroll();
-  return(
-    <div className="h-screen w-full bg-zinc-900 font-medium">
-       <div className="bg-zinc-900 md:w-full">
-        <NavBar />
+  return (
+    <Router>
+      <div className="h-screen w-full bg-zinc-900 font-medium">
+        <Routes>
+          <Route path="/Home" element={<Home/>} />
+          <Route path="/" element={<LoadingPage/>} />
+        </Routes>
       </div>
-      <div className="bg-zinc-900 md:w-full">
-        <Work />
-      </div>
-      <div className="bg-zinc-900 md:w-full">
-        <Stripes />
-      </div>
-      <div className="bg-zinc-900 md:w-full">
-        <Cards />
-      </div>
-      <div className="bg-zinc-900 md:w-full">
-        <Marks />
-      </div>
-      <div className="bg-zinc-900 md:w-full">
-        <NewCard />
-      </div>
-      <div className="bg-zinc-900 md:w-full">
-        <Footer/>
-      </div>
-
-    </div>
-  )
-}
+    </Router>
+  );
+};
 
 export default App;
-
-
